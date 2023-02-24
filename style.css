@@ -195,3 +195,7 @@ nav img:hover,h5:hover{
     display: none;
     position: relative;
 }
+
+*{
+    background-color: bisque;
+}
