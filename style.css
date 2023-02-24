@@ -1,0 +1,197 @@
+*{
+    margin: 1px;
+    background-color: white;
+}
+body{
+    padding-top: 1vh;
+}
+
+aside{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Sección de boton desplegable*/
+.boton-desplegable{
+    max-width: 20px;
+    max-height: 20px;
+    background-color: gainsboro;
+    border-radius: 15px;
+    padding: 6px;
+}
+aside ol{
+    list-style: none;
+}
+
+.boton-desplegable:hover{
+    display: block;
+    background-color: burlywood;
+}
+
+li{
+    border: solid 2px blue;
+    padding: 10px;
+}
+
+li:hover{
+    color: white;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+main{
+    display: grid;
+    padding: 0;
+    margin: 0;
+}
+
+main img{
+    margin: 5vh;
+    display: flex;
+    border-radius: 2vw;
+    max-width: 90%;
+    margin: 1vw;
+    cursor: pointer;
+    gap: 0vh;
+}
+
+/*Efecto de sombreado*/
+.series img:hover{
+    filter: brightness(0.5);
+}
+
+/*Definir espacios para imagenes horizonrales y verticales*/
+.series img{
+    grid-row: span 5;
+    
+}
+.horizontal{
+    grid-row: span 2 !important;
+}
+
+/*Tamños de los botones*/
+.botones-front{
+    display: flex;
+}
+.botones-front img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+/*Nav*/
+nav{
+    display: flex;
+    text-align: center;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 120%;
+}
+nav h5,input{
+    padding: 0 10px;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav img{
+    max-width: 30px;
+    border-radius: 100px;
+}
+nav img:hover,h5:hover{
+    cursor: pointer;
+}
+
+#btn-inicio{
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    width: 60px;
+    height: 40px;
+}
+
+/*Barra de busqueda*/
+.busqueda{
+    background-color:rgb(232, 232, 232);
+    border: none;
+    border-radius: 15px;
+    height: 4vh;   
+    width: 70vw; 
+}
+
+/*Sección de condicionales para diferente tamaño de pantalla (ancho)*/
+@media screen and (min-width: 100px) {
+    main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main img{
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 300px) {
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+    main img{
+        width: 40vw;
+        }
+}
+
+@media screen and (min-width: 550px) {
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+    main img{
+        width: 30vw;
+}
+}
+
+@media screen and (min-width: 700px) {
+    main{
+        grid-template-columns: repeat(4,1fr);
+    }
+    main img{
+        width: 23vw;
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main{
+        grid-template-columns: repeat(5,1fr);
+    }
+    main img{
+        width: 18vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        grid-template-columns: repeat(6,1fr);
+    }
+    main img{
+        width: 16vw;
+    }
+    main img:hover ~.save{
+        position: relative;
+        display: block;
+        left:200px;
+        bottom: 400px;
+    }
+}
+
+/*Para boton guardar capa superior*/
+.save{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    color: white;
+    background-color: red;
+    border-radius: 30px;
+    height: 45px;
+    border: none;
+    display: none;
+    position: relative;
+}
