@@ -1,50 +1,93 @@
+/*Ajustes iniciales generales*/
 *{
     margin: 1px;
     background-color: white;
 }
 body{
     padding-top: 1vh;
+    position: relative;
 }
-
-aside{
-    display: flex;
-    justify-content: space-around;
-}
-
-/*Sección de boton desplegable*/
-.boton-desplegable{
-    max-width: 20px;
-    max-height: 20px;
-    background-color: gainsboro;
-    border-radius: 15px;
-    padding: 6px;
-}
-aside ol{
-    list-style: none;
-}
-
-.boton-desplegable:hover{
-    display: block;
-    background-color: burlywood;
-}
-
-li{
-    border: solid 2px blue;
-    padding: 10px;
-}
-
-li:hover{
-    color: white;
-    background-color: lightblue;
-    cursor: pointer;
-}
-
-main{
+#content{
     display: grid;
     padding: 0;
     margin: 0;
 }
+aside ol{
+    list-style: none;
+    padding: 5px;
+    border-radius: 20px;
+    border: seashell;
+    display: none;
+}
+#navbar-pinterest{
+    position: relative;
+}
+li{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+aside{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*Barra de Navegación superior*/
+ol{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    position: absolute;
+}
+/*Sub menu desplegable del boton de la navageción*/
+li:hover{
+    color: black;
+    background-color: rgb(232, 232, 232);
+    cursor: pointer;
+    transition: 0.4s;
+}
 
+#navbar-pinterest{
+    display: flex;
+    text-align: center;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 120%;
+}
+nav h5,input{
+    padding: 2px 10px;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar-pinterest img{
+    max-width: 30px;
+    border-radius: 200px;
+}
+#navbar-pinterest img:hover,h5:hover{
+    cursor: pointer;
+}
+#btn-inicio{
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    width: 60px;
+    height: 40px;
+}
+/*Barra de busqueda*/
+.finder{
+    background-color:rgb(232, 232, 232);
+    border: none;
+    border-radius: 15px;
+    height: 4vh;   
+    width: 70vw; 
+}
+/*-----------------------------------------------------------------------------------------*/
+/*Parte principal, colocación de las imagenes*/
 main img{
     margin: 5vh;
     display: flex;
@@ -54,133 +97,46 @@ main img{
     cursor: pointer;
     gap: 0vh;
 }
-
 /*Efecto de sombreado*/
-.series img:hover{
+#content img:hover{
     filter: brightness(0.5);
 }
-
+/*-----------------------------------------------------------------------------------------------*/
 /*Definir espacios para imagenes horizonrales y verticales*/
-.series img{
-    grid-row: span 5;
-    
+.card-image{
+    grid-row: span 5;   
+    max-height: ;
 }
-.horizontal{
-    grid-row: span 2 !important;
+#horizontal{
+    grid-row: span 2;
 }
-
+/*-----------------------------------------------------------------------------------------------*/
 /*Tamños de los botones*/
 .botones-front{
     display: flex;
+    justify-content: space-between;
+    left: 15%;
+    width:70%;
+    padding: 0;
+    position: absolute;
+    top: 60%;
+    background:none;
+    display: none;
 }
-.botones-front img{
+#horizontal .botones-front{
+    top: 40%;
+    display: none;
+}
+.botones-front button img{
     max-width: 30px;
     max-height: 30px;
+    background: rgb(232, 232, 232);
 }
-
-/*Nav*/
-nav{
-    display: flex;
-    text-align: center;
-    justify-content:space-around;
-    align-items: center;
-    font-size: 120%;
-}
-nav h5,input{
-    padding: 0 10px;
-    height: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav img{
-    max-width: 30px;
-    border-radius: 100px;
-}
-nav img:hover,h5:hover{
-    cursor: pointer;
-}
-
-#btn-inicio{
-    color: white;
-    background-color: black;
-    border-radius: 20px;
-    width: 60px;
-    height: 40px;
-}
-
-/*Barra de busqueda*/
-.busqueda{
-    background-color:rgb(232, 232, 232);
+.botones-front button{
+    background: none;
     border: none;
-    border-radius: 15px;
-    height: 4vh;   
-    width: 70vw; 
 }
 
-/*Sección de condicionales para diferente tamaño de pantalla (ancho)*/
-@media screen and (min-width: 100px) {
-    main{
-        grid-template-columns: repeat(1,1fr);
-    }
-    main img{
-        width: 80vw;
-    }
-}
-
-@media screen and (min-width: 300px) {
-    main{
-        grid-template-columns: repeat(2,1fr);
-    }
-    main img{
-        width: 40vw;
-        }
-}
-
-@media screen and (min-width: 550px) {
-    main{
-        grid-template-columns: repeat(3,1fr);
-    }
-    main img{
-        width: 30vw;
-}
-}
-
-@media screen and (min-width: 700px) {
-    main{
-        grid-template-columns: repeat(4,1fr);
-    }
-    main img{
-        width: 23vw;
-
-    }
-}
-
-@media screen and (min-width: 900px) {
-    main{
-        grid-template-columns: repeat(5,1fr);
-    }
-    main img{
-        width: 18vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    main{
-        grid-template-columns: repeat(6,1fr);
-    }
-    main img{
-        width: 16vw;
-    }
-    main img:hover ~.save{
-        position: relative;
-        display: block;
-        left:200px;
-        bottom: 400px;
-    }
-}
-
-/*Para boton guardar capa superior*/
 .save{
     font-size: larger;
     display: flex;
@@ -192,10 +148,109 @@ nav img:hover,h5:hover{
     border-radius: 30px;
     height: 45px;
     border: none;
+    position: absolute;
+    top: 25px;
+    left: 140px;
     display: none;
-    position: relative;
+}
+/*----------------------------------------------------------------------------------------------*/
+/*Sección de condicionales para diferente tamaño de pantalla (ancho)*/
+@media screen and (min-width: 100px) {
+    main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main img{
+        width: 80vw;
+    }
+    .save{
+        left: 45%;
+    }
 }
 
-*{
-    background-color: bisque;
+@media screen and (min-width: 300px) {
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+    main img{
+        width: 40vw;
+    }
+    .save{
+        left: 45%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+    main img{
+        width: 30vw;
+    }
+    .save{
+        left: 45%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    main{
+        grid-template-columns: repeat(4,1fr);
+    }
+    main img{
+        width: 23vw;
+    }
+    .save{
+        left: 45%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main{
+        grid-template-columns: repeat(5,1fr);
+    }
+    main img{
+        width: 18vw;
+    }
+    .save{
+        left: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        grid-template-columns: repeat(6,1fr);
+    }
+    main img{
+        width: 16vw;
+    }
+    .save{
+        left: 65%;
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+/*Boton Desplegable de la barra de navegación*/
+.boton-desplegable{
+    max-width: 20px;
+    max-height: 20px;
+    background-color: gainsboro;
+    border-radius: 15px;
+    padding: 6px;
+}
+
+/*Para boton guardar capa superior*/
+.card-image{
+    position: relative;
+}
+main img:hover ~.save, main img:hover ~.botones-front{
+    display: block;
+}
+
+/*Aqui es donde intento que se despliegue el menu lateral (aside) pero no funciona*/
+.boton-desplegable:hover ~ol{
+    display: block;
+}
+.boton-desplegable:hover ~li{
+    display: block;
+}
+.boton-desplegable:hover ~aside{
+    display: block;
 }

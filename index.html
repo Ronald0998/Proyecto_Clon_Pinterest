@@ -10,23 +10,24 @@
 </head>
 
 <body>
-    <nav>
-        <img src="./imagenes/logo pinterest.png" alt="Logo Pinterest">
+    <nav id="navbar-pinterest">
+        <a href="https://www.pinterest.com.mx/"><img src="./imagenes/logo pinterest.png" alt="Logo Pinterest"></a>
         <h5 id="btn-inicio">Inicio</h5>
         <h5>Hoy</h5>
         <h5>Crear</h5>
-        <input class="busqueda" type="text" placeholder="Search" id="search">
+        <input class="finder" type="text" placeholder="Search" id="search">
         <label for="search"></label>
         <img src="./imagenes/iconos/notificacion.png" alt="notificacion">
         <img src="./imagenes/iconos/comentario.png" alt="comentario">
         <img src="./imagenes/Ronaldo.jpg" alt="Foto de perfil">
+        <img class="boton-desplegable" src="./imagenes/iconos/desplegable.png" alt="Boton de desplegable">
     </nav>
 
     <aside>
-        <img class="boton-desplegable" src="./imagenes/iconos/desplegable.png" alt="Boton de desplegable">
         <ol>
             <li>Añadir cuenta</li>
             <li>Convertir en cuenta para empresas</li>
+            <br>
             <li>Ajustes</li>
             <li>Optimiza tu feed de inicio</li>
             <li>Instala la app windows</li>
@@ -38,49 +39,256 @@
         </ol>
     </aside>
 
-    <main class="series">
-        <!--<div>--><img src="./imagenes/Boys.jpeg" alt="img 0">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img src="./imagenes/cards.jpg" alt="img 1">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img src="./imagenes/Crown.jpg" alt="img 2">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img class="horizontal" src="./imagenes/Benjamin.jpg" alt="img 3">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img src="./imagenes/dark.jpg" alt="img 4">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img class="horizontal" src="./imagenes/dracula.jpg" alt="img 5">
-            <!--<button class="save">Guardar</button></div>-->
-        <!--<div>--><img src="./imagenes/Demon.jpg" alt="img 6">
-            <!--<button class="save">Guardar</button></div>-->
-        <img src="./imagenes/Office.jpg" alt="img 7">
-        <img class="horizontal" src="./imagenes/Saul.jpeg" alt="img 8">
-        <img src="./imagenes/Titan.jpg" alt="img 9">
-        <img src="./imagenes/Dragon.jpg" alt="img 10">
-        <img class="horizontal" src="./imagenes/Hunter.jpe" alt="img 11">
-        <img src="./imagenes/Vikings.jpg" alt="img 12">
-        <img src="./imagenes/Betty.jpg" alt="img 13">
-        <img src="./imagenes/Breaking.jpg" alt="img 14">
-        <img src="./imagenes/Got.webp" alt="img 15">
-        <img src="./imagenes/Euphoria.jpg" alt="img 16">
-        <img class="horizontal" src="./imagenes/once-upon.jpg_large" alt="img 17">
-        <img class="horizontal" src="./imagenes/medici.jpg" alt="img 18">
-        <img src="./imagenes/Merli.jpg" alt="img 19">
-        <img class="horizontal" src="./imagenes/Rick.jpg" alt="img 20">
-        <img src="./imagenes/modern.jpg" alt="img 21">
-        <img src="./imagenes/avatar.jpg" alt="img 22">
-        <img src="./imagenes/call-me.jpg" alt="img 23">
-        <img src="./imagenes/fight.jpg" alt="img 24">
-        <img src="./imagenes/interestelar.jpg" alt="img 25">
-        <img src="./imagenes/made.jpg" alt="img 26">
-        <img src="./imagenes/name.jpg" alt="img 27">
-        <img src="./imagenes/rush.jpg" alt="img 28">
+    <main id="content">
+        <div class="card-image">
+            <img src="./imagenes/Boys.jpeg" alt="img 0">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/cards.jpg" alt="img 1">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Crown.jpg" alt="img 2">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/Benjamin.jpg" alt="img 3">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/dark.jpg" alt="img 4">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/dracula.jpg" alt="img 5">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Demon.jpg" alt="img 6">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Office.jpg" alt="img 7">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/Saul.jpeg" alt="img 8">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Titan.jpg" alt="img 9">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Dragon.jpg" alt="img 10">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/Hunter.jpe" alt="img 11">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Vikings.jpg" alt="img 12">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Betty.jpg" alt="img 13">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Breaking.jpg" alt="img 14">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Got.webp" alt="img 15">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Euphoria.jpg" alt="img 16">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/once-upon.jpg_large" alt="img 17">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/medici.jpg" alt="img 18">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Merli.jpg" alt="img 19">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image" id="horizontal">
+            <img src="./imagenes/Rick.jpg" alt="img 20">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/modern.jpg" alt="img 21">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/avatar.jpg" alt="img 22">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/call-me.jpg" alt="img 23">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/fight.jpg" alt="img 24">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/interestelar.jpg" alt="img 25">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/made.jpg" alt="img 26">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/name.jpg" alt="img 27">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/rush.jpg" alt="img 28">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Hero.jpg" alt="img 29">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="./imagenes/Pacific.jpg" alt="img 30">
+            <button class="save">Guardar</button>
+            <div class="botones-front">
+                <button><img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones"></button>
+                <button><img src="./imagenes/iconos/participacion.png" alt="Boton de compartir"></button>
+            </div>
+        </div>
     </main>
 
-    <div class="botones-front">
-        
-        <img src="./imagenes/iconos/opciones.png" alt="Boton de Opciones">
-        <img src="./imagenes/iconos/participacion.png" alt="Boton de compartir">
-    </div>
 </body>
 </html>
